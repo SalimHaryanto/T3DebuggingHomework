@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BE612712C20B1FA00AF1BD9 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE612702C20B1F900AF1BD9 /* PageVC.swift */; };
+		1BE612752C20BFE200AF1BD9 /* PageVCWithSkip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE612742C20BFE200AF1BD9 /* PageVCWithSkip.swift */; };
 		85C66CFA2BFE427C003E3A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C66CF92BFE427C003E3A86 /* AppDelegate.swift */; };
 		85C66CFC2BFE427C003E3A86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C66CFB2BFE427C003E3A86 /* SceneDelegate.swift */; };
 		85C66CFE2BFE427C003E3A86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C66CFD2BFE427C003E3A86 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BE612702C20B1F900AF1BD9 /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		1BE612742C20BFE200AF1BD9 /* PageVCWithSkip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVCWithSkip.swift; sourceTree = "<group>"; };
 		85C66CF62BFE427C003E3A86 /* T3DebuggingHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T3DebuggingHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C66CF92BFE427C003E3A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85C66CFB2BFE427C003E3A86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,11 +70,13 @@
 				85C66CFB2BFE427C003E3A86 /* SceneDelegate.swift */,
 				85C66CFD2BFE427C003E3A86 /* ViewController.swift */,
 				85C66D122BFE494F003E3A86 /* HelloWorldViewController.swift */,
+				1BE612702C20B1F900AF1BD9 /* PageVC.swift */,
 				85C66D0D2BFE470F003E3A86 /* AttendeeFlow */,
 				85C66CFF2BFE427C003E3A86 /* Main.storyboard */,
 				85C66D022BFE427E003E3A86 /* Assets.xcassets */,
 				85C66D042BFE427E003E3A86 /* LaunchScreen.storyboard */,
 				85C66D072BFE427E003E3A86 /* Info.plist */,
+				1BE612742C20BFE200AF1BD9 /* PageVCWithSkip.swift */,
 			);
 			path = T3DebuggingHomework;
 			sourceTree = "<group>";
@@ -155,9 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE612752C20BFE200AF1BD9 /* PageVCWithSkip.swift in Sources */,
 				85C66CFE2BFE427C003E3A86 /* ViewController.swift in Sources */,
 				85C66CFA2BFE427C003E3A86 /* AppDelegate.swift in Sources */,
 				85C66D132BFE494F003E3A86 /* HelloWorldViewController.swift in Sources */,
+				1BE612712C20B1FA00AF1BD9 /* PageVC.swift in Sources */,
 				85C66CFC2BFE427C003E3A86 /* SceneDelegate.swift in Sources */,
 				85C66D0F2BFE4730003E3A86 /* T3ViewController.swift in Sources */,
 				85C66D112BFE473C003E3A86 /* T3AttendeeViewController.swift in Sources */,

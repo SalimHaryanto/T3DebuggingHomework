@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="na7-Pt-JJv">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -8,10 +8,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--PageVC With Skip-->
+        <scene sceneID="h5G-Zk-ghx">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="na7-Pt-JJv" customClass="PageVCWithSkip" customModule="T3DebuggingHomework" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibR-BP-zZg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2218" y="335"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="NVg-tg-wa3">
             <objects>
-                <viewController id="x62-hM-2Nm" customClass="ViewController" customModule="T3DebuggingHomework" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstView" id="x62-hM-2Nm" customClass="ViewController" customModule="T3DebuggingHomework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mjT-M4-Qvg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +33,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uLh-tJ-rv4">
                                 <rect key="frame" x="16" y="123" width="361" height="695"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Hello! This app is meant to be completed as a part of your ACT Certification.
+                                <string key="text">Hello! This app is meant to be completed as a part of your ACT Certification.
 
 You have a few tasks to complete in this project:
 
@@ -34,7 +42,7 @@ You have a few tasks to complete in this project:
 3. Implemented a certain way, there appears to be a bug when you run the app and view the Hello World View Controller. Find and resolve the issue.
 4. Include the T3 Attendees flow in your app in some manner.
 5. Complete the tasks in the T3 Attendee View Controller below.
-6. In T3AttendeeViewController.swift, complete the logic emoji computed property on the AttendeeInfo enumeration and display the emoji for each attendee (1-8). You may choose whichever emojis you like for each attendee.</mutableString>
+6. In T3AttendeeViewController.swift, complete the logic emoji computed property on the AttendeeInfo enumeration and display the emoji for each attendee (1-8). You may choose whichever emojis you like for each attendee.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -52,15 +60,16 @@ You have a few tasks to complete in this project:
                             <constraint firstItem="p5i-qU-69w" firstAttribute="bottom" secondItem="uLh-tJ-rv4" secondAttribute="bottom" id="l3e-iN-OM6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DnA-fi-0xW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVo-3P-WEC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567.17557251908397" y="-408.45070422535213"/>
+            <point key="canvasLocation" x="-1373" y="335"/>
         </scene>
         <!--Hello World View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HelloWorldViewController" customModule="T3DebuggingHomework" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondView" id="BYZ-38-t0r" customClass="HelloWorldViewController" customModule="T3DebuggingHomework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,29 +93,31 @@ You have a few tasks to complete in this project:
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="UXb-Fb-Non"/>
                     <connections>
                         <outlet property="explanationTextView" destination="jnY-8m-YkV" id="OT7-a6-gVx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="-2"/>
+            <point key="canvasLocation" x="-608" y="335"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I2I-Yj-7mA">
             <objects>
-                <navigationController id="Gt3-8z-aWD" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootNavigationController" id="Gt3-8z-aWD" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RpB-Js-8Ev"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WSd-w2-PnO">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="bol-mT-Pq1" kind="relationship" relationship="rootViewController" id="Ene-T3-sKe"/>
+                        <segue destination="bol-mT-Pq1" kind="relationship" relationship="rootViewController" id="E7n-CB-1ch"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3P-e2-nkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="91" y="720"/>
+            <point key="canvasLocation" x="660" y="335"/>
         </scene>
         <!--T3 Attendees-->
         <scene sceneID="KK2-t2-Eu4">
@@ -116,100 +127,17 @@ You have a few tasks to complete in this project:
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="T3 Attendees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpc-fr-6vS">
-                                <rect key="frame" x="16" y="59" width="197" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T3 Attendees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpc-fr-6vS">
+                                <rect key="frame" x="16" y="111" width="197" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="QwP-mQ-KOB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZPt-qz-sfB">
-                                <rect key="frame" x="24" y="150.99999999999994" width="357.66666666666669" height="185.33333333333331"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="141" translatesAutoresizingMaskIntoConstraints="NO" id="qWL-bn-dJb">
-                                        <rect key="frame" x="0.0" y="0.0" width="357.66666666666669" height="34.333333333333336"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWS-9H-Mgd">
-                                                <rect key="frame" x="0.0" y="0.0" width="108.33333333333333" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 1">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="H1L-wK-lIj" kind="show" id="Jel-Yy-CxA"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmI-Pg-ojC">
-                                                <rect key="frame" x="249.33333333333334" y="0.0" width="108.33333333333334" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 2">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="141" translatesAutoresizingMaskIntoConstraints="NO" id="gtW-hJ-sJS">
-                                        <rect key="frame" x="0.0" y="50.333333333333329" width="357.66666666666669" height="34.333333333333329"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrI-gv-Z2U">
-                                                <rect key="frame" x="0.0" y="0.0" width="108.33333333333333" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 3">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DB3-lw-40f">
-                                                <rect key="frame" x="249.33333333333334" y="0.0" width="108.33333333333334" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 4">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="141" translatesAutoresizingMaskIntoConstraints="NO" id="dWG-vj-IDv">
-                                        <rect key="frame" x="0.0" y="100.66666666666667" width="357.66666666666669" height="34.333333333333329"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTq-6T-dI2">
-                                                <rect key="frame" x="0.0" y="0.0" width="108.33333333333333" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 5">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgb-HS-dWi">
-                                                <rect key="frame" x="249.33333333333334" y="0.0" width="108.33333333333334" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 6">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="141" translatesAutoresizingMaskIntoConstraints="NO" id="t7b-zz-fzF">
-                                        <rect key="frame" x="0.0" y="151" width="357.66666666666669" height="34.333333333333343"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6y-n2-k5o">
-                                                <rect key="frame" x="0.0" y="0.0" width="108.33333333333333" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 7">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAT-2l-jsj">
-                                                <rect key="frame" x="249.33333333333334" y="0.0" width="108.33333333333334" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 8">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uvy-e6-e85">
-                                <rect key="frame" x="16" y="393" width="361" height="425"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uvy-e6-e85">
+                                <rect key="frame" x="16" y="353" width="361" height="465"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <mutableString key="text">Tasks:
 1. When you tap on an attendee button above you should navigate to the T3 Attendee View Controller, which should reflect the attendee number you tapped in the title and the image should update with the corresponding attendee image (named 'attendee1', 'attendee2', &amp;c. in the Assets catalog).
@@ -219,15 +147,113 @@ You have a few tasks to complete in this project:
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZPt-qz-sfB">
+                                <rect key="frame" x="0.0" y="160" width="393" height="185"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="141" translatesAutoresizingMaskIntoConstraints="NO" id="qWL-bn-dJb">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="34.333333333333336"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWS-9H-Mgd">
+                                                <rect key="frame" x="0.0" y="0.0" width="126" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 1">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="H1L-wK-lIj" kind="show" id="Jel-Yy-CxA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmI-Pg-ojC">
+                                                <rect key="frame" x="267" y="0.0" width="126" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 2">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="141" translatesAutoresizingMaskIntoConstraints="NO" id="gtW-hJ-sJS">
+                                        <rect key="frame" x="0.0" y="50.333333333333343" width="393" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrI-gv-Z2U">
+                                                <rect key="frame" x="0.0" y="0.0" width="126" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 3">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DB3-lw-40f">
+                                                <rect key="frame" x="267" y="0.0" width="126" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 4">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="141" translatesAutoresizingMaskIntoConstraints="NO" id="dWG-vj-IDv">
+                                        <rect key="frame" x="0.0" y="100.66666666666669" width="393" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTq-6T-dI2">
+                                                <rect key="frame" x="0.0" y="0.0" width="126" height="34"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 5">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgb-HS-dWi">
+                                                <rect key="frame" x="267" y="0.0" width="126" height="34"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 6">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="141" translatesAutoresizingMaskIntoConstraints="NO" id="t7b-zz-fzF">
+                                        <rect key="frame" x="0.0" y="150.66666666666669" width="393" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6y-n2-k5o">
+                                                <rect key="frame" x="0.0" y="0.0" width="126" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 7">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAT-2l-jsj">
+                                                <rect key="frame" x="267" y="0.0" width="126" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Attendee 8">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="dpE-Nf-oPl"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XtO-hD-o2g"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="Uvy-e6-e85" firstAttribute="leading" secondItem="XtO-hD-o2g" secondAttribute="leading" constant="16" id="4d7-qe-afc"/>
+                            <constraint firstItem="ZPt-qz-sfB" firstAttribute="bottom" secondItem="Uvy-e6-e85" secondAttribute="top" constant="-8" id="Ccy-dj-bsy"/>
+                            <constraint firstItem="gpc-fr-6vS" firstAttribute="top" secondItem="XtO-hD-o2g" secondAttribute="top" constant="8" id="GBX-mK-N2N"/>
+                            <constraint firstItem="ZPt-qz-sfB" firstAttribute="leading" secondItem="XtO-hD-o2g" secondAttribute="leading" id="aa8-LX-KoU"/>
+                            <constraint firstItem="gpc-fr-6vS" firstAttribute="bottom" secondItem="ZPt-qz-sfB" secondAttribute="top" constant="-8" id="dCG-t3-T5Q"/>
+                            <constraint firstItem="XtO-hD-o2g" firstAttribute="trailing" secondItem="ZPt-qz-sfB" secondAttribute="trailing" id="fum-qD-hj7"/>
+                            <constraint firstItem="XtO-hD-o2g" firstAttribute="trailing" secondItem="Uvy-e6-e85" secondAttribute="trailing" constant="16" id="fyK-HD-thw"/>
+                            <constraint firstItem="XtO-hD-o2g" firstAttribute="bottom" secondItem="Uvy-e6-e85" secondAttribute="bottom" id="kne-Gp-Yoe"/>
+                            <constraint firstItem="gpc-fr-6vS" firstAttribute="leading" secondItem="XtO-hD-o2g" secondAttribute="leading" constant="16" id="v6F-GX-aKe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="T3 Attendees" largeTitleDisplayMode="always" id="ZV6-0V-rkO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHg-lE-xrx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="983.96946564885491" y="719.71830985915494"/>
+            <point key="canvasLocation" x="1560" y="335"/>
         </scene>
         <!--Attendee View Controller-->
         <scene sceneID="mig-zR-gMe">
@@ -237,20 +263,25 @@ You have a few tasks to complete in this project:
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attendee Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DT4-6r-oPK">
-                                <rect key="frame" x="16" y="59" width="227" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attendee Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DT4-6r-oPK">
+                                <rect key="frame" x="16" y="111" width="227" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Ubu-W1-kFp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2BB-hc-zhD">
-                                <rect key="frame" x="76" y="162" width="240" height="226"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attendee6" translatesAutoresizingMaskIntoConstraints="NO" id="2BB-hc-zhD">
+                                <rect key="frame" x="76.666666666666686" y="160" width="240" height="226"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="1pr-fJ-LFZ"/>
+                                    <constraint firstAttribute="height" constant="226" id="W8W-B2-i1z"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKM-XD-gbI">
-                                <rect key="frame" x="16" y="437" width="361" height="286"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKM-XD-gbI">
+                                <rect key="frame" x="16" y="394" width="361" height="424"/>
+                                <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -258,6 +289,16 @@ You have a few tasks to complete in this project:
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oi6-cS-zlI"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="AKM-XD-gbI" firstAttribute="leading" secondItem="oi6-cS-zlI" secondAttribute="leading" constant="16" id="4nT-B3-Rp4"/>
+                            <constraint firstItem="AKM-XD-gbI" firstAttribute="top" secondItem="2BB-hc-zhD" secondAttribute="bottom" constant="8" id="9hc-aQ-uoR"/>
+                            <constraint firstItem="oi6-cS-zlI" firstAttribute="bottom" secondItem="AKM-XD-gbI" secondAttribute="bottom" id="AUB-5y-LDv"/>
+                            <constraint firstItem="DT4-6r-oPK" firstAttribute="leading" secondItem="oi6-cS-zlI" secondAttribute="leading" constant="16" id="MBU-Ko-pIe"/>
+                            <constraint firstItem="oi6-cS-zlI" firstAttribute="top" secondItem="DT4-6r-oPK" secondAttribute="top" constant="-8" id="cK9-v2-Gz5"/>
+                            <constraint firstItem="2BB-hc-zhD" firstAttribute="centerX" secondItem="oi6-cS-zlI" secondAttribute="centerX" id="nfN-CE-svo"/>
+                            <constraint firstItem="DT4-6r-oPK" firstAttribute="bottom" secondItem="2BB-hc-zhD" secondAttribute="top" constant="-8" id="oXc-PO-lGc"/>
+                            <constraint firstItem="oi6-cS-zlI" firstAttribute="trailing" secondItem="AKM-XD-gbI" secondAttribute="trailing" constant="16" id="tFR-IJ-HYd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3C3-aW-QJX"/>
                     <connections>
@@ -268,10 +309,11 @@ You have a few tasks to complete in this project:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmu-KC-ZpN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768.7022900763359" y="681.69014084507046"/>
+            <point key="canvasLocation" x="2509" y="335"/>
         </scene>
     </scenes>
     <resources>
+        <image name="attendee6" width="222" height="222"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
